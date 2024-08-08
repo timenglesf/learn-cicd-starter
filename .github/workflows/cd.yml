@@ -9,12 +9,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        run:  actions/checkout@v4
+        uses: actions/checkout@v4
 
-	  - name: Setup Go
-	    run:  actions/setup-go@v5
-	    with:
-	      go-version: "1.22"
+      - name: Setup Go
+        uses: actions/go-setup@v5
+        with:
+          go-version: "1.22"
 
       - name: Build Go Binary
-        run: ./scrips/buildprod.sh
+        run: ./scripts/buildprod.sh
