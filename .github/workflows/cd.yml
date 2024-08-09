@@ -20,4 +20,4 @@ jobs:
         run: ./scripts/buildprod.sh
 
       - name: Build Docker image and push to GCP Artifact Registry
-        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-431916/notely-ar-repo/timenglesf/notely:latest .
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-431916/notely-ar-repo/timenglesf/notely:latest --project notely-431916 .
